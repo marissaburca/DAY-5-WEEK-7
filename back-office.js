@@ -88,7 +88,7 @@ const editActual = (ab) => {
   })
     .then((res) => {
       if (res.ok) {
-        alert("Are you sure you wanna edit the item details?")
+        alert("Are you sure you wanna edit the item details?");
         location.assign("shop-window.html");
       } else {
         throw new Error("ERRORE NEL RECUPERO DETTAGLIO");
@@ -139,7 +139,6 @@ if (eventId) {
           imageUrl: inputSrc.value,
         };
         editActual(newObj);
-        
       });
     })
 

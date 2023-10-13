@@ -1,3 +1,4 @@
+
 const presenceId = new URLSearchParams(location.search);
 const eventId = presenceId.get("eventId");
 
@@ -7,7 +8,7 @@ const generateItemDetails = function (event) {
   // prendo un riferimento alla row
   const row = document.getElementById("event-details");
   row.innerHTML = `
-    <div class="col">
+    <div class="col col-8">
     <div class="card mb-4 shadow-sm">
       <img
         src="${event.imageUrl}"
@@ -20,9 +21,9 @@ const generateItemDetails = function (event) {
         <p class="card-text"> Price: ${event.price}€</p>
         <a
       type="button"
-      href="back-office.html?eventId=${event._id}"
-      class="btn btn-sm btn-danger">
-      Go to back-office section to edit item details
+      href="shop-window.html"
+      class="btn btn-sm btn-success">
+      Back to Shop
     </a>
         <div
           class="d-flex justify-content-center align-items-center">

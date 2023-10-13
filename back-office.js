@@ -74,6 +74,10 @@ hide1.classList.add("d-none");
 const hide2 = document.getElementById("delete");
 hide2.classList.add("d-none");
 
+const hide3 = document.getElementById("post");
+const hide4 = document.getElementById("reset");
+
+
 /* DANGER ZONEEEEE ATTENTION PLEASEEEEE */
 
 const editActual = (ab) => {
@@ -103,6 +107,12 @@ const editActual = (ab) => {
 if (eventId) {
   hide1.classList.remove("d-none");
   hide2.classList.remove("d-none");
+
+  hide3.classList.add("d-none");
+  hide4.classList.add("d-none");
+
+  const title = document.getElementById('title')
+  title.innerText = 'EDIT ITEM'
 
   fetch("https://striveschool-api.herokuapp.com/api/product/" + eventId, {
     headers: {

@@ -3,11 +3,9 @@ const renderEvents = function (arrayOfEvents) {
 
   arrayOfEvents.forEach((event) => {
     const newCard = document.createElement("div");
-    newCard.classList.add("col");
+    newCard.classList.add("col-8","col-sm-6","col-md-4","col-lg-4","col-xl-3","col-xxl-2");
     newCard.innerHTML = `
-        
-            <div class="col-md-12 ">
-              <div class="card mb-4 shadow-sm" style="width: 18rem; height: 35rem">
+              <div class="card shadow p-2 mb-3 mx-0 bg-body-tertiary rounded" style=" height: 33rem">
                 <img
                   src="${event.imageUrl}"
                   class="bd-placeholder-img card-img-top pb-0"
@@ -22,13 +20,18 @@ const renderEvents = function (arrayOfEvents) {
                     <div class="btn-group">
                       <a
                         type="button"
+                        href="back-office.html?eventId=${event._id}"
+                        class="btn btn-sm btn-outline-warning mx-2">
+                        Edit
+                      </a>
+                      <a
+                        type="button"
                         href="details.html?eventId=${event._id}"
-                        class="btn btn-sm btn-outline-secondary">
-                        Take a look to more details
+                        class="btn btn-sm btn-success">
+                        More details
                       </a>
                     </div>
-                  </div>
-                </div>
+                  </div>  
               `;
     row.appendChild(newCard);
   });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +10,23 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+        body{
+            height:100%;
+            width:100%;
+            background-image: url(ASSETS/soffici-texture-giocattolo-da-vicino.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+   
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Toys &amp; More</a>
+            <a class="navbar-brand fs-3 fw-bold " href="#"><img src="ASSETS/pngegg.png" width="60px" height="60px"/> Hello!</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -27,8 +38,8 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-0 mb-2 mb-lg-0 ">
               <li class="nav-item">
                 <a
                   class="nav-link active"
@@ -47,24 +58,14 @@
                 >
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+        
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <h1 class="text-center my-4">Our selection of stuffed toys</h1>
-      <div class="container">
+      <h1 class="text-center my-4 display-4 p-3 fw-bold text-white bg-dark">Our selection of stuffed toys</h1>
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div
             class="spinner-border text-info mb-5"
@@ -74,7 +75,7 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div class="row" id="cards-row">
+        <div class="row justify-content-center" id="cards-row">
           <!-- Metto card generate, quì -->
         </div>
       </div>

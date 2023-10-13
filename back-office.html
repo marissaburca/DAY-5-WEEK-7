@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,59 +10,60 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+        body{
+            height:100vh;
+            width:100%;
+        }
+    </style>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Toys &amp; More</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="shop-window.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="details.html">Details</a>
-              </li>
-
-              <li class="nav-item active">
-                <a class="nav-link" aria-disabled="true">Back-office</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+              <a class="navbar-brand fs-3 fw-bold " href="#"><img src="ASSETS/pngegg.png" width="60px" height="60px"/> Hello!</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav me-0 mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a
+                    class="nav-link "
+                    aria-current="page"
+                    href="shop-window.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Details</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link active" href="back-office.html" aria-disabled="true"
+                    >Back-office</a
+                  >
+                </li>
+              </ul>
+          
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
     <main>
-      <h1 class="text-center my-4">Create or edit Items for sale</h1>
+      <h1 class="text-center m-5 my-4 display-5 text-danger py-5 fw-bold" id="title">ADD ITEM TO STORE</h1>
       <div class="container">
-        <div class="row justify-content-center" id="event-form">
+        <div class="row justify-content-center ms-0" id="event-form">
           <div class="col col-12 col-lg-6">
-            <form id="form">
+            <form id="form ">
               <div class="mb-3">
                 <label for="name" class="form-label">Item name</label>
                 <input type="text" class="form-control" id="name" required />
@@ -100,7 +101,7 @@
               <button type="button" class="btn btn-danger" id="delete">
                 Delete
               </button>
-              <button type="button" class="btn btn-secondary" id="reset">
+              <button type="button" class="btn btn-light" id="reset">
                 Reset
               </button>
             </form>
